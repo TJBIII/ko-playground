@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KO TODO</title>
+</head>
+<body>
+
+  <h1>KO TODO LIST</h1>
+
+  <form data-bind="submit: addItem">
+    New item:
+    <input data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' />
+    <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+  </form>
+
+  <div>
+    <p>Your items (<span data-bind="text: todos().length"></span>):</p>
+    <div data-bind="foreach: todos">
+      <div>
+        <span data-bind="text: $data"></span>
+        <button data-bind="click: $root.removeItem">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-debug.js"></script>
+  <script src="todo.js"></script>
+
+</body>
+</html>

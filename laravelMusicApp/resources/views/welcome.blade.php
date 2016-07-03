@@ -30,6 +30,10 @@
                 display: inline-block;
             }
 
+            p {
+                margin: 0 auto;
+            }
+
             .title {
                 font-size: 96px;
             }
@@ -38,7 +42,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">
+                    <p>Laravel + KnockoutJS</p>
+                    <p>Music App</p>
+                </div>
+                <h1><a href="/music">See Music</a></h1>
             </div>
         </div>
     </body>

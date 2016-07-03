@@ -39,6 +39,5 @@ var MusicViewModel = function (startingTracks) {
 
 //load in some starting tracks
 $.get('/tracks', function(tracks) {
-  console.log("tracks", tracks);
   ko.applyBindings(MusicViewModel(tracks));
 });
